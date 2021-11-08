@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<style>
+#vihaan{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-image: url(knife.jpg);
+	background-size: contain;
+	background-color:blue;
+}
+
+</style>
+<div id = "vihaan"></div>
+<script type="text/javascript">
+	
+var vihaan = document.getElementById("vihaan");
+
+
+document.addEventListener("click",
+	function (event){
+		console.log(event);
+		console.log(event.clientX, event.clientY);
+		vihaan.style.left= event.clientX+"px";
+		vihaan.style.top= event.clientY+"px";})
+
+
+</script>
+</body>
+</html>
