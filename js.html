@@ -2,20 +2,31 @@
 <html>
 <head>
 	<title></title>
+	<a href = "projects.html">Back to Projects Page!</a>
 </head>
 <body>
 <style>
 #vihaan{
 	position: absolute;
-	width: 20px;
-	height: 20px;
-	background-image: url(knife.jpg);
+	width: 200px;
+	height: 200px;
+	background-image: url(Tom.webp);
 	background-size: contain;
-	background-color:blue;
+	background-size: cover;
+}
+#background{
+	width: 1430px;
+	height: 800px;
+	background-image: url(background.jpg);
+	background-size: contain;
+	background-size: cover;
+
 }
 
 </style>
 <div id = "vihaan"></div>
+<div id = "background"></div>
+
 <script type="text/javascript">
 	
 var vihaan = document.getElementById("vihaan");
@@ -28,6 +39,12 @@ document.addEventListener("click",
 		vihaan.style.left= event.clientX+"px";
 		vihaan.style.top= event.clientY+"px";})
 
+ocument.addEventListener("space",
+	function (event){
+		console.log(event);
+		console.log(event.clientX, event.clientY);
+		vihaan.style.left= event.clientX+"px";
+		vihaan.style.top= event.clientY+"px";})
 
 </script>
 </body>

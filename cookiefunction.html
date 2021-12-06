@@ -4,20 +4,27 @@
 	<title></title>
 </head>
 <body>
+	<a href="projects.html">Back to Projects Page</a>
+
 <script>
 	function makeCookie (){
 		var cookie = document.createElement("div")
 		document.body.appendChild(cookie);
 		cookie.style.height = "200px";
 		cookie.style.width = "200px";
-		cookie.style.backgroundImage = "url(tennisball.png)";
+		cookie.style.backgroundImage = "url(watermelons.gif)";
+		cookie.style.backgroundSize = "contain"; 
+		cookie.style.backgroundRepeat = "no-repeat";
+		cookie.style.backgroundPosition = "center";
+		cookie.style.display = "inline-block";
 		cookie.addEventListener("click", function() {
-			cookie.style.backgroundImage = "url(knife.jpg)"
+			cookie.style.backgroundImage = "url(unnamed.gif)"
+			cookie.style.backgroundSize = "cover";
+			cookie.style.backgroundSize = "contain";
 		})
 	}
-setInterval(makeCookie, 1000)
+setInterval(makeCookie, 500)
 
 </script>
-
 </body>
 </html>
