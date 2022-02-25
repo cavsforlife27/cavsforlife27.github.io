@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type = "text/css">
+		body{
+				background-color:green;
+			margin:0px;
+		}
+		p{
+			font-family: serif;
+			font-size: 100px;
+			color:red;
+		}
+	</style>
+</head>
+<body> 
+	<center><p> Match played! </p></center>
+	
+
+		<script type="text/javascript">
+
+		var counter = 0; 
+
+		function makeMoney (){
+							counter = counter+1; 
+
+
+		var cookie = document.createElement("div");
+		document.body.appendChild(cookie);
+		cookie.style.height = "200px";
+		cookie.style.width = "200px";
+		cookie.style.backgroundImage = "url(100money.jpg)";
+		cookie.style.backgroundSize = "contain"; 
+		cookie.style.backgroundRepeat = "no-repeat";
+		cookie.style.backgroundPosition = "center";
+		cookie.style.display = "inline-block";
+					console.log(counter);
+
+		cookie.addEventListener("click", function() {
+			cookie.style.backgroundImage = "url(serving.jpg)"
+			cookie.style.backgroundSize = "cover";
+			cookie.style.backgroundSize = "contain";
+		})
+	}
+
+
+	function counting (){
+			if (counter < 855){
+				makeMoney()}
+			 else if (counter > 855){
+			 	console.log("ahhh!")
+			 	clearInterval(makeMoney)}
+	}
+
+
+setInterval(counting, 30)
+</script>
+<br>
+<a href="dr3.html">Next</a>
+		<a href="dr1.html">Back</a>
+	<br>
+</body>
+</html>

@@ -10,10 +10,20 @@
 	position: absolute;
 	width: 200px;
 	height: 200px;
-	background-image: url(Tom.webp);
-	background-size: contain;
+	background-image: url(Tom.png);
 	background-size: cover;
 }
+
+#jerry{
+position: absolute;
+width: 100px;
+height: 100px;
+background-image: url(jerry.png);
+z-index: 1;
+background-size: contain;
+background-repeat: no-repeat;
+}
+
 #background{
 	width: 1430px;
 	height: 800px;
@@ -26,19 +36,33 @@
 </style>
 <div id = "vihaan"></div>
 <div id = "background"></div>
+<div id = "jerry"></div>
 
 <script type="text/javascript">
 	
 var vihaan = document.getElementById("vihaan");
 
 
-document.addEventListener("click",
+document.addEventListener("mousemove",
 	function (event){
 		console.log(event);
 		console.log(event.clientX, event.clientY);
-		vihaan.style.left= event.clientX+"px";
-		vihaan.style.top= event.clientY+"px";})
+		vihaan.style.left= event.clientX-100+"px";
+		vihaan.style.top= event.clientY-100+"px";})
 
+
+
+var jerry = document.getElementById("jerry");
+
+function randomMovement(){
+var left = Math.random()*1430
+var top = Math.random()*800
+jerry.style.left= left+"px";
+jerry.style.top= top+"px";}
+
+setInterval(randomMovement, 700)
+
+jerry.addEventListener("mouseover", function(){alert("You won!")})
 
 
 

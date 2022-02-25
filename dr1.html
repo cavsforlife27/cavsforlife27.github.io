@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		body{
+			background-color: black;
+			margin:0px;
+		}
+
+		p{
+			font-family: arial;
+			font-size:100px;
+			color:white;
+		}
+	</style>
+</head>
+<body> 
+
+	<center><p>Ace hit!</p></center>
+	
+
+	<script type="text/javascript">
+
+		var counter = 0; 
+
+		function makeMoney (){
+							counter = counter+1; 
+
+
+		var cookie = document.createElement("div");
+		document.body.appendChild(cookie);
+		cookie.style.height = "200px";
+		cookie.style.width = "200px";
+		cookie.style.backgroundImage = "url(100money.jpg)";
+		cookie.style.backgroundSize = "contain"; 
+		cookie.style.backgroundRepeat = "no-repeat";
+		cookie.style.backgroundPosition = "center";
+		cookie.style.display = "inline-block";
+					console.log(counter);
+
+		cookie.addEventListener("click", function() {
+			cookie.style.backgroundImage = "url(serving.jpg)"
+			cookie.style.backgroundSize = "cover";
+			cookie.style.backgroundSize = "contain";
+		})
+	}
+
+
+	function counting (){
+			if (counter < 115){
+				makeMoney()}
+			 else if (counter > 115){
+			 	console.log("ahhh!")
+			 	clearInterval(makeMoney)}
+	}
+
+
+setInterval(counting, 100)
+
+
+	</script>
+<br>
+<a href="dr2.html">Next</a>
+<a href="datarepresentation">Back</a>
+<br>
+<!-- <div id = bkg>
+	</div> -->
+</body>
+</html>

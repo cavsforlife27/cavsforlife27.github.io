@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type = "text/css">
+		body{
+				background-color:pink;
+			margin:0px;
+		}
+		p{
+			font-family: san serif;
+			font-size: 100px;
+			color: purple;
+		}
+	</style>
+</head>
+<body> 
+	<center><p>Shot hit! (inclusive of practice)</p></center>
+
+		<script type="text/javascript">
+
+		var counter = 0; 
+
+		function makeMoney (){
+							counter = counter+1; 
+
+
+		var cookie = document.createElement("div");
+		document.body.appendChild(cookie);
+		cookie.style.height = "200px";
+		cookie.style.width = "200px";
+		cookie.style.backgroundImage = "url(money.jpg)";
+		cookie.style.backgroundSize = "contain"; 
+		cookie.style.backgroundRepeat = "no-repeat";
+		cookie.style.backgroundPosition = "center";
+		cookie.style.display = "inline-block";
+					console.log(counter);
+
+		cookie.addEventListener("click", function() {
+			cookie.style.backgroundImage = "url(rff.jpg)"
+			cookie.style.backgroundSize = "cover";
+			cookie.style.backgroundSize = "contain";
+		})
+	}
+
+
+	function counting (){
+			if (counter < 66){
+				makeMoney()}
+			 else if (counter > 66){
+			 	console.log("ahhh!")
+			 	clearInterval(makeMoney)}
+	}
+
+
+setInterval(counting, 150)
+</script>
+</body>
+</html>
