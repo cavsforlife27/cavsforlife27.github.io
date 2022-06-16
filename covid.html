@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="input"></div>
+	<audio id="sound"></audio>
+<script type="text/javascript">
+var pew = document.getElementById('sound');
+var input = document.getElementById('input');
+var x = 0;
+
+function createCorona(){
+	var corona = document.createElement('div');
+	document.body.appendChild(corona);
+	corona.classList.add("virus");
+
+	corona.addEventListener("click", function() {
+	console.log("hi");
+	x = x+1;
+	input.innerText = x;
+	corona.classList.remove("virus");
+	pew.play() }) 
+
+function changePosition() {
+	corona.style.left = 1000 * Math.random() + "px";
+	corona.style.top = 1000 * Math.random() + "px"; };
+
+	setInterval(changePosition, 2000)
+
+
+};
+
+
+
+	setInterval(createCorona, 1000);
+
+
+</script>
+
+
+</body>
+</html>

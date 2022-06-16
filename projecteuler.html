@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+<style type="text/css">
+#whatever{
+font-size:100px;
+}
+</style>
+</head>
+<body>
+
+<div id="whatever"></div>
+<script type="text/javascript">
+
+var sumA =0;
+
+for (var a = 0; a<1000; a=a+3){
+
+sumA = sumA + a;
+
+console.log(sumA);
+
+console.log("sumA is " + sumA);
+}
+
+var sumB =0;
+
+for (var b = 0; b<1000; b=b+5){
+
+sumB = sumB + b;
+
+console.log(sumB);
+
+console.log("sumBis " + sumB);
+}
+
+var sumC =0;
+
+for (var c = 0; c<1000; c=c+15){
+
+sumC = sumC + c;
+
+console.log(sumC);
+
+console.log("sumC is " + sumC);
+}
+
+console.log("The sum of the multiples of 3 is " + sumA);
+console.log("The sum of the multiples of 5 is " + sumB);
+console.log("The sum of the multiples of 15 is " + sumC);
+
+
+
+function subtract(){
+var number = sumA + sumB - sumC;
+
+console.log("This is the sum of all the multiples of 3 and 5 below 1000 is " + number)
+
+whatever.innerText = number;
+
+};
+
+
+subtract();
+
+
+
+
+
+</script>
+</body>
+</html>

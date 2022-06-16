@@ -3,8 +3,7 @@
 <head>
 	<title></title>
 	<a href = "projects.html">Back to Projects Page!</a>
-</head>
-<body>
+
 <style>
 #vihaan{
 	position: absolute;
@@ -12,6 +11,7 @@
 	height: 200px;
 	background-image: url(Tom.png);
 	background-size: cover;
+	cursor: none;
 }
 
 #jerry{
@@ -34,6 +34,10 @@ background-repeat: no-repeat;
 }
 
 </style>
+</head>
+
+<body>
+
 <div id = "vihaan"></div>
 <div id = "background"></div>
 <div id = "jerry"></div>
@@ -60,12 +64,22 @@ var top = Math.random()*800
 jerry.style.left= left+"px";
 jerry.style.top= top+"px";}
 
-setInterval(randomMovement, 700)
+setInterval(randomMovement, 500)
 
 jerry.addEventListener("mouseover", function(){alert("You won!")})
+          
+            var x = 0
 
-
-
+ clickthis.addEventListener(
+        "click", function(){
+        	console.log("h")
+        // function stopwatch (){
+        //     x= x+1
+        // console.log = x;
+        // }
+        // setInterval(stopwatch, 1000)            
+        } )
 </script>
+
 </body>
 </html>
